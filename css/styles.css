@@ -247,13 +247,6 @@ main {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-
-    grid-template-areas:
-        "bites"
-        "noura"
-        "mundo"
-        "tetoro";
-
     gap: 1rem;
     padding: 1rem;
 }
@@ -272,23 +265,6 @@ main {
     outline: 3px solid #6F2E46;
     outline-offset: 4px;
 }
-
-.bites {
-    grid-area: bites;
-}
-
-.noura {
-    grid-area: noura;
-}
-
-.mundo {
-    grid-area: mundo;
-}
-
-.tetoro {
-    grid-area: tetoro;
-}
-
 
 .tarjeta-proyecto h2 {
     font-size: 1.5rem;
@@ -345,6 +321,7 @@ footer p {
 
 /* Tablet */
 @media (min-width: 768px) {
+
     .galeria-proyectos {
         grid-template-columns: 1fr 1fr;
     }
@@ -433,6 +410,23 @@ footer p {
             "bites noura noura"
             "bites mundo tetoro";
     }
+
+    .bites {
+    grid-area: bites;
+}
+
+.noura {
+    grid-area: noura;
+}
+
+.mundo {
+    grid-area: mundo;
+}
+
+.tetoro {
+    grid-area: tetoro;
+}
+
 
 .mobile {
     display: none;
