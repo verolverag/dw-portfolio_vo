@@ -1,0 +1,26 @@
+// Flex
+@mixin flex($direction, $justify, $align, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+
+// Grid
+@mixin grid($columnas, $filas, $areas, $gap) {
+    display: grid;
+    grid-template-columns: $columnas;
+    grid-template-rows: $filas;
+    grid-template-areas: $areas;
+    gap: $gap;
+}
+
+
+//Vista Escritorio
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}

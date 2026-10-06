@@ -1,0 +1,55 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+.header {
+    background-color: #f7f2f3;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.logo-navbar {
+    width: 260px;
+    height: auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.hamburguesa {
+    font-size: 2rem;
+    color: $color-oscuro;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.links-menu {
+    color: $color-oscuro;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $color-principal;
+        color: #ffffff;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        transition: 0.3s;
+    }
+
+    &:active {
+        background-color: #6F2E46;
+        color: #ffffff;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        transition: 0.3s;
+    }
+}

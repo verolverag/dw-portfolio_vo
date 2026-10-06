@@ -1,0 +1,31 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+body {
+    font-family: $fuente-principal;
+    font-weight: 400;
+    color: #211C1F;
+}
+
+/*Títulos y textos*/
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: #6F2E46;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.subtitle {
+    color: #211C1F;
+}
+
+p {
+    color: #818282;
+}

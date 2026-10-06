@@ -1,0 +1,96 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+.galeria-proyectos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.tarjeta-proyecto {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    &:focus {
+        outline: 3px solid #6F2E46;
+        outline-offset: 4px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        color: #6F2E46;
+        padding: 1rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        border-radius: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #818282;
+        padding: 1rem;
+    }
+}
+
+// Vista Escritorio
+@include desktop {
+    .galeria-proyectos {
+        @include grid(1fr 1fr 1fr, auto, "bites noura noura" "bites mundo tetoro", 1rem);
+    }
+
+    .bites {
+        grid-area: bites;
+    }
+
+    .noura {
+        grid-area: noura;
+    }
+
+    .mundo {
+        grid-area: mundo;
+    }
+
+    .tetoro {
+        grid-area: tetoro;
+    }
+
+
+    .mobile {
+        display: none;
+    }
+
+    .bites img {
+        aspect-ratio: 1/1.5;
+        object-fit: cover;
+
+    }
+
+    .noura img {
+        aspect-ratio: 2/1;
+        object-fit: cover;
+    }
+
+    .mundo img {
+        aspect-ratio: 16/9;
+        object-fit: cover;
+    }
+
+    .tetoro img {
+        aspect-ratio: 16/9;
+        object-fit: cover;
+
+    }
+}

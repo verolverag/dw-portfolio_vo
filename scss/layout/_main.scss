@@ -1,0 +1,72 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+.hero-home {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+background-color: $color-principal;
+border-radius: 2rem;
+padding: 1.5rem 2rem;
+margin-bottom: 2rem;
+}
+
+.hero-contenido {
+    width: 100%;
+    padding-left: 0rem;
+}
+
+.hero-foto {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #6F2E46;
+}
+
+.hero-intro {
+font-size: 1.5rem;
+font-weight: 500;
+color: #211C1F;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.boton-proyectos {
+    display: inline-block;
+    background-color: #6F2E46;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.boton-proyectos:hover {
+    background-color: #ffffff;
+    color: #6F2E46;
+    transition: 0.3s;
+}
+
+main {
+    color: #211C1F;
+    background-color: #F7F2F3;
+    gap: 2rem;
+    padding: 1rem;
+}
