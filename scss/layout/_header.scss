@@ -3,7 +3,7 @@
 @use "../utilities/extend" as *;
 
 .header {
-    background-color: #f7f2f3;
+    background-color: $color-claro;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,11 +16,11 @@
     display: block;
 }
 
+header {
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 2rem;
-    justify-content: space-evenly;
+        @include flex(null, space-evenly, null, 2rem);
+    }
 }
 
 .hamburguesa {
@@ -39,15 +39,15 @@ nav ul {
 
     &:hover {
         background-color: $color-principal;
-        color: #ffffff;
+        color: $color-white;
         padding: 0.5rem 1rem;
         border-radius: 1rem;
         transition: 0.3s;
     }
 
     &:active {
-        background-color: #6F2E46;
-        color: #ffffff;
+        background-color: $color-oscuro;
+        color: $color-white;
         padding: 0.5rem 1rem;
         border-radius: 1rem;
         transition: 0.3s;

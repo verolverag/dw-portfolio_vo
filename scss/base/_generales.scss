@@ -5,16 +5,16 @@
 body {
     font-family: $fuente-principal;
     font-weight: 400;
-    color: #211C1F;
+    color: $color-oscurotexto;
 }
 
-/*Títulos y textos*/
+//Títulos y textos
 .title {
-    font-family: "Poppins", sans-serif;
+    font-family: $fuente-principal;
     font-weight: 700;
     font-style: normal;
     font-size: 2.5rem;
-    color: #6F2E46;
+    color: $color-oscuro;
     text-align: center;
 }
 
@@ -23,9 +23,9 @@ img {
 }
 
 .subtitle {
-    color: #211C1F;
+    color: $color-oscurotexto;
 }
 
 p {
-    color: #818282;
+    color: $color-clarotexto;
 }

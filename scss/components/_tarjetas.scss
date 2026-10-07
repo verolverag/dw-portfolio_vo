@@ -1,0 +1,29 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+.tarjeta {
+    background-color: $color-tarjeta;
+    color: $color-oscurotexto;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+
+    h2 {
+    font-size: 1.5rem;
+    color: $color-oscuro;
+    padding: 1rem;
+    font-weight: 600;
+    }
+
+    img {
+    border-radius: 1rem;
+    }
+
+    p {
+    font-size: 1rem;
+    color: $color-clarotexto;
+    padding: 1rem;
+    }
+}

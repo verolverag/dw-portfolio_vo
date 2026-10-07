@@ -1,4 +1,11 @@
-@charset "UTF-8";
+.boton-proyectos, .boton-sobre {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -8,16 +15,15 @@
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  color: #211C1F;
+  color: #221c1f;
 }
 
-/*Títulos y textos*/
 .title {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 2.5rem;
-  color: #6F2E46;
+  color: #6f2e46;
   text-align: center;
 }
 
@@ -26,7 +32,7 @@ img {
 }
 
 .subtitle {
-  color: #211C1F;
+  color: #221c1f;
 }
 
 p {
@@ -34,7 +40,7 @@ p {
 }
 
 .header {
-  background-color: #f7f2f3;
+  background-color: #f6f1f2;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,11 +52,11 @@ p {
   display: block;
 }
 
-nav ul {
+header nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
   justify-content: space-evenly;
+  gap: 2rem;
 }
 
 .hamburguesa {
@@ -75,11 +81,139 @@ nav ul {
   transition: 0.3s;
 }
 .links-menu:active {
-  background-color: #6F2E46;
+  background-color: #6f2e46;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   transition: 0.3s;
+}
+
+main {
+  color: #221c1f;
+  background-color: #f6f1f2;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #f6f1f2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+footer ul li a img {
+  width: 24px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+footer p {
+  font-size: 0.9rem;
+}
+
+.galeria-proyectos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.tarjeta-proyecto {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.tarjeta-proyecto:focus {
+  outline: 3px solid #6f2e46;
+  outline-offset: 4px;
+}
+.tarjeta-proyecto h2 {
+  font-size: 1.5rem;
+  color: #6f2e46;
+  padding: 1rem;
+}
+.tarjeta-proyecto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 1rem;
+}
+.tarjeta-proyecto p {
+  font-size: 1rem;
+  color: #818282;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .galeria-proyectos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .galeria-proyectos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "bites noura noura" "bites mundo tetoro";
+    gap: 1rem;
+  }
+  .bites {
+    grid-area: bites;
+  }
+  .bites img {
+    aspect-ratio: 1/1.5;
+    object-fit: cover;
+  }
+  .noura {
+    grid-area: noura;
+  }
+  .noura img {
+    aspect-ratio: 2/1;
+    object-fit: cover;
+  }
+  .mundo {
+    grid-area: mundo;
+  }
+  .mundo img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .tetoro {
+    grid-area: tetoro;
+  }
+  .tetoro img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .mobile {
+    display: none;
+  }
+}
+video-responsive {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  border: 0;
+  display: block;
 }
 
 .hero-home {
@@ -110,13 +244,13 @@ nav ul {
   font-size: 4rem;
   font-weight: 400;
   line-height: 1.1;
-  color: #6F2E46;
+  color: #6f2e46;
 }
 
 .hero-intro {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #211C1F;
+  color: #221c1f;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -128,107 +262,206 @@ nav ul {
   margin-bottom: 1.5rem;
 }
 
-.boton-proyectos {
-  display: inline-block;
-  background-color: #6F2E46;
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
+.hero {
+  background-color: #ffffff;
+  color: #6f2e46;
+  padding: 2rem;
   border-radius: 2rem;
-  text-decoration: none;
-  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.hero h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+  color: #6f2e46;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
+.contenedor-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.area-creativa {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.area-creativa img {
+  width: 70px;
+  height: auto;
+}
+.area-creativa:not(:last-child) {
+  border-bottom: 1px solid #E8DADD;
+}
+
+.area-texto h3 {
+  margin: 0;
+  color: #6f2e46;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.area-texto p {
+  margin: 0.25rem 0 0;
+  color: #818282;
+}
+
+@media (min-width: 768px) {
+  .hero-home {
+    flex-direction: row;
+  }
+  .hero-contenido {
+    width: 65%;
+  }
+  .hero-foto {
+    width: 35%;
+  }
+  .contenedor-area {
+    flex-direction: row;
+    width: 100%;
+  }
+  .area-creativa {
+    flex: 1;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .area-creativa img {
+    width: 50px;
+  }
+  .area-creativa:not(:last-child) {
+    border-bottom: none;
+    border-right: 1px solid #E8DADD;
+  }
+  .area-texto h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .area-texto p {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-home {
+    padding: 1.5rem 3rem;
+  }
+  .hero-contenido {
+    width: 70%;
+    padding-left: 3rem;
+  }
+  .hero-foto {
+    width: 20%;
+    padding-right: 1rem;
+  }
+  .area-creativa img {
+    width: 70px;
+    height: auto;
+  }
+  .area-texto h3 {
+    font-size: 1.5rem;
+  }
+  .area-texto p {
+    font-size: 1.25rem;
+  }
+}
+.sobre-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: #6f2e46;
+  border-radius: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sobre-foto {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.sobre-titulo {
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.sobre-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #f6f1f2;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .sobre-hero {
+    flex-direction: row;
+  }
+  .sobre-foto {
+    width: 40%;
+  }
+  .sobre-contenido {
+    width: 60%;
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .sobre-hero {
+    padding: 2rem 3rem;
+  }
+  .sobre-foto {
+    width: 20%;
+  }
+  .sobre-contenido {
+    width: 70%;
+    padding-left: 3rem;
+  }
+}
+.boton-proyectos {
+  background-color: #6f2e46;
+  color: #ffffff;
+}
 .boton-proyectos:hover {
   background-color: #ffffff;
-  color: #6F2E46;
+  color: #6f2e46;
   transition: 0.3s;
 }
 
-main {
-  color: #211C1F;
-  background-color: #F7F2F3;
-  gap: 2rem;
-  padding: 1rem;
-}
-
-.galeria-proyectos {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.tarjeta-proyecto {
+.boton-sobre {
   background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  color: #6f2e46;
+}
+.boton-sobre:hover {
+  background-color: #f6f1f2;
+  color: #6f2e46;
+  transition: 0.3s;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  color: #221c1f;
+  padding: 1.5rem;
   gap: 1rem;
-  padding: 1rem;
   border-radius: 1rem;
+  text-align: center;
 }
-.tarjeta-proyecto:focus {
-  outline: 3px solid #6F2E46;
-  outline-offset: 4px;
-}
-.tarjeta-proyecto h2 {
+.tarjeta h2 {
   font-size: 1.5rem;
-  color: #6F2E46;
+  color: #6f2e46;
   padding: 1rem;
+  font-weight: 600;
 }
-.tarjeta-proyecto img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+.tarjeta img {
   border-radius: 1rem;
 }
-.tarjeta-proyecto p {
+.tarjeta p {
   font-size: 1rem;
   color: #818282;
   padding: 1rem;
-}
-
-@media (min-width: 1200px) {
-  .galeria-proyectos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "bites noura noura" "bites mundo tetoro";
-    gap: 1rem;
-  }
-  .bites {
-    grid-area: bites;
-  }
-  .noura {
-    grid-area: noura;
-  }
-  .mundo {
-    grid-area: mundo;
-  }
-  .tetoro {
-    grid-area: tetoro;
-  }
-  .mobile {
-    display: none;
-  }
-  .bites img {
-    aspect-ratio: 1/1.5;
-    object-fit: cover;
-  }
-  .noura img {
-    aspect-ratio: 2/1;
-    object-fit: cover;
-  }
-  .mundo img {
-    aspect-ratio: 16/9;
-    object-fit: cover;
-  }
-  .tetoro img {
-    aspect-ratio: 16/9;
-    object-fit: cover;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

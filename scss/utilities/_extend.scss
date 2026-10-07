@@ -1,2 +1,10 @@
 @use "variables" as *; 
 @use "mixin" as *;
+
+%boton-base {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+}

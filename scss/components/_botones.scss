@@ -1,0 +1,28 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+
+.boton-proyectos {
+    @extend %boton-base;
+    background-color: $color-oscuro;
+    color: $color-white;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-oscuro;
+        transition: 0.3s;
+    }
+}
+
+.boton-sobre {
+    @extend %boton-base;
+    background-color: $color-white;
+    color: $color-oscuro;
+
+    &:hover {
+        background-color: $color-claro;
+        color: $color-oscuro;
+        transition: 0.3s;
+    }
+}
