@@ -3,7 +3,8 @@
 @use "../utilities/extend" as *;
 
 .tarjeta {
-    background-color: $color-tarjeta;
+    //background-color: $color-tarjeta;
+    background: linear-gradient($color-tarjeta, $color-claro);
     color: $color-oscurotexto;
     padding: 1.5rem;
     gap: 1rem;
@@ -19,7 +20,7 @@
 
     img {
     border-radius: 1rem;
-    }
+}
 
     p {
     font-size: 1rem;

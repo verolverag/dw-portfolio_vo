@@ -2,6 +2,17 @@
 @use "../utilities/mixin" as *;
 @use "../utilities/extend" as *;
 
+@keyframes entrada-proyectos {
+    0% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .galeria-proyectos {
     width: 100%;
     @include grid(1fr, null, null, 1rem);
@@ -13,6 +24,7 @@
     @include flex(column, center, center, 1rem);
     padding: 1rem;
     border-radius: 1rem;
+    animation: entrada-proyectos 1s ease-out;
 
     &:focus {
         outline: 3px solid $color-oscuro;

@@ -7,11 +7,11 @@
     @extend %boton-base;
     background-color: $color-oscuro;
     color: $color-white;
+    transition: 0.3s;
 
     &:hover {
         background-color: $color-white;
         color: $color-oscuro;
-        transition: 0.3s;
     }
 }
 
@@ -19,10 +19,23 @@
     @extend %boton-base;
     background-color: $color-white;
     color: $color-oscuro;
+    transition: 0.3s;
 
     &:hover {
         background-color: $color-claro;
         color: $color-oscuro;
-        transition: 0.3s;
     }
+}
+
+.boton-na {
+    @extend %boton-base;
+    background-color: $na-verde;
+    color: $color-white;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $na-rosaclaro;
+        color: $na-verde;
+    }
+
 }

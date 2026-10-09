@@ -1,0 +1,185 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+.main-na {
+    background-color: $na-fondoclaro;
+    padding: 1rem;
+}
+
+.hero-na {
+    @include flex(column, null, center, 2rem);
+    padding: 2rem 1rem;
+}
+
+.hero-na-contenido {
+    width: 100%;
+}
+
+.hero-na-title {
+    font-family: $fuente-secundaria;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: $na-verde;
+}
+
+.hero-na-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: $color-oscurotexto;
+    margin-bottom: 2rem;
+}
+
+.hero-na-foto {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+//Lo que nace en negro ambar
+
+.na-intenciones {
+    background-color: $na-clarorosa;
+    color: $color-oscurotexto;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+
+    h2 {
+        font-family: $fuente-secundaria;
+        font-size: 2rem;
+        color: $na-verde;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    p{
+        color: $color-oscurotexto;
+        text-align: center;
+    }
+}
+
+.na-contenedor {
+    @include flex(column, null, null, null);
+}
+
+.na-item {
+    @include flex(null, null, center, 1rem);
+    padding: 1rem 0;
+
+    img {
+        width: 70px;
+        height: auto;
+    }
+
+    h3 {
+        margin: 0;
+        color: $na-verde;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin: 0.25rem 0 0;
+        color: $color-oscurotexto;
+        text-align: left;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $na-verde;
+    }
+}
+
+// Vista Tablet
+@include tablet {
+
+    .hero-na {
+        flex-direction: row;
+    }
+
+    .hero-na-contenido {
+        width: 65%;
+    }
+
+    .hero-na-foto {
+        width: 30%;
+    }
+
+//lo que hace NA
+    .na-contenedor {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .na-item {
+        flex: 1;
+        justify-content: center;
+        padding: 0 1rem;
+
+        img {
+            width: 50px;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        &:not(:last-child) {
+            border-bottom: none;
+            border-right: 1px solid $na-verde;
+        }
+    }
+}
+
+// Vista Escritorio
+@include desktop {
+    .hero-na {
+        padding: 2rem 3rem;
+    }
+
+    .hero-na-contenido {
+        width: 60%;
+        padding-left: 2rem;
+    }
+
+    .hero-na-foto {
+        width: 25%;
+        padding-left: 1rem;
+    }
+
+    .hero-na-title {
+        font-size: 4rem;
+    }
+
+    // Lo que nace en Negro Ámbar
+    .na-intenciones {
+        padding: 1.5rem 2rem;
+    }
+
+    .na-item {
+        padding: 0 1.5rem;
+        justify-content: center;
+
+        img {
+            width: 70px;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
