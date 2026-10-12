@@ -1,0 +1,13 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/extend" as *;
+
+body {
+    font-family: $fuente-principal;
+    font-weight: 400;
+    color: $color-oscurotexto;
+}
+
+img {
+    max-width: 100%;
+}

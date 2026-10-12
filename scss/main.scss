@@ -1,11 +1,13 @@
 @use "utilities/variables";
 @use "utilities/extend";
-@use "utilities/mixin";
+@use "utilities/mixins";
 
 @use "base/reseteo";
-@use "base/generales";
+@use "base/base";
+@use "base/tipografia";
 
 @use "layout/header";
+@use "layout/nav";
 @use "layout/main";
 @use "layout/footer";
 @use "layout/proyectos";
@@ -17,6 +19,3 @@
 
 @use "components/botones";
 @use "components/tarjetas";
-
-
-

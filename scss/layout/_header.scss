@@ -1,55 +1,18 @@
 @use "../utilities/variables" as *;
-@use "../utilities/mixin" as *;
+@use "../utilities/mixins" as *;
 @use "../utilities/extend" as *;
+
+@use "../utilities/variables" as *;
 
 .header {
     background-color: $color-claro;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 .logo-navbar {
     width: 260px;
     height: auto;
     display: block;
-}
-
-header {
-nav ul {
-    list-style: none;
-        @include flex(null, space-evenly, null, 2rem);
-    }
-}
-
-.hamburguesa {
-    font-size: 2rem;
-    color: $color-oscuro;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.links-menu {
-    color: $color-oscuro;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s;
-
-    &:hover {
-        background-color: $color-principal;
-        color: $color-white;
-        padding: 0.5rem 1rem;
-        border-radius: 1rem;
-        transform: scale(1.2);
-    }
-
-    &:active {
-        background-color: $color-oscuro;
-        color: $color-white;
-        padding: 0.5rem 1rem;
-        border-radius: 1rem;
-    }
 }
