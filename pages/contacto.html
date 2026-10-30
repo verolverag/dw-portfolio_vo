@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Verónica Olvera</title>
-    <meta name="description" content="¿Tienes un proyecto en mente? Ponte en contacto conmigo para colaborar en diseño gráfico, identidad visual, UX/UI y proyectos creativos.">
+    <meta name="description"
+        content="¿Tienes un proyecto en mente? Ponte en contacto conmigo para colaborar en diseño gráfico, identidad visual, UX/UI y proyectos creativos.">
     <meta name="keywords" content="contacto diseñadora gráfica, colaboración creativa, proyectos de diseño">
 
     <!--CSS Bootstrap-->
@@ -65,29 +66,92 @@
             <h1>¿Tienes una idea en mente?</h1>
             <p>Cuéntame un poco sobre tu proyecto y veamos cómo podemos hacerlo realidad.</p>
         </section>
-        <form action="#">
-            <fieldset>
-                <legend>Datos personales</legend>
-                <label>Nombre<input type="text"></label>
-                <label>Apellido<input type="text"></label>
-            </fieldset>
 
-            <label>Comentarios <textarea name="comentarios"
-                    placeholder="Escribe tus comentarios aquí..."></textarea></label>
+        <!-- Sección Hablemos -->
+        <section class="contacto-hablemos">
+            <div class="contacto-hablemos-contenido">
+                <h2>Hablemos</h2>
+                <p>Puedes escribirme directamente o conectar conmigo
+                    en mis otras plataformas. ¡Será un gusto conocer
+                    tu proyecto!</p>
 
-            <button value="submit">Enviar</button>
-        </form>
+                <div class="contacto-hablemos-enlaces">
+                    <a class="contacto-enlace" href="mailto:emmav.olverag@gmail.com">
+                        <img class="contacto-enlace-icono" src="../assets/contacto/mail-icon.png" alt="icono de mail">
+                        <div class="contacto-enlace-texto">
+                            <p class="contacto-enlace-titulo">Correo</p>
+                            <p class="contacto-enlace-descripcion">Escríbeme directamente</p>
+                        </div>
+                        <span class="contacto-enlace-flecha" aria-hidden="true">›</span>
+                    </a>
+                    <a class="contacto-enlace" href="https://www.behance.net/verolverag" target="_blank">
+                        <img class="contacto-enlace-icono" src="../assets/contacto/be-icon.png" alt="behance icono">
+                        <div class="contacto-enlace-texto">
+                            <p class="contacto-enlace-titulo">Behance</p>
+                            <p class="contacto-enlace-descripcion">Mira mis proyectos</p>
+                        </div>
+                        <span class="contacto-enlace-flecha" aria-hidden="true">›</span>
+                    </a>
+                    <a class="contacto-enlace" href="https://www.linkedin.com/in/veronicaolverag/" target="_blank">
+                        <img class="contacto-enlace-icono" src="../assets/contacto/in-icon.png" alt="linkedin icono">
+                        <div class="contacto-enlace-texto">
+                            <p class="contacto-enlace-titulo">LinkedIn</p>
+                            <p class="contacto-enlace-descripcion">Conectemos profesionalmente</p>
+                        </div>
+                        <span class="contacto-enlace-flecha" aria-hidden="true">›</span>
+                    </a>
+                    <a class="contacto-enlace" href="https://www.instagram.com/verolverag/" target="_blank">
+                        <img class="contacto-enlace-icono" src="../assets/contacto/ig-icon.png" alt="instagram icono">
+                        <div class="contacto-enlace-texto">
+                            <p class="contacto-enlace-titulo">Instagram</p>
+                            <p class="contacto-enlace-descripcion">Un poco de mi día a día</p>
+                        </div>
+                        <span class="contacto-enlace-flecha" aria-hidden="true">›</span>
+                    </a>
+                </div>
+            </div>
 
-        <iframe
-            title="Mapa de ubicación en el Centro Histórico de León, Guanajuato"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1164.2096964051552!2d-101.68223847400738!3d21.120926629909803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf44276517bf%3A0x507ec09e28d75dff!2sCentro%20Hist%C3%B3rico!5e0!3m2!1ses-419!2smx!4v1787193464314!5m2!1ses-419!2smx"
-            allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="contacto-hablemos-imagen">
+                <img src="../assets/contacto/escritorio.png" alt="espacio de trabajo de Verónica">
+            </div>
 
-        <iframe class="video-responsive" src="https://www.youtube.com/embed/9md71-I-c44?si=seapGWukT0XlSCdV"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
+        </section>
+
+        <!-- Información adicional de contacto -->
+        <section class="contacto-info">
+
+            <h2>Un poco más de mi mundo creativo</h2>
+            <p>Información útil para empezar a trabajar juntos</p>
+
+            <div class="contacto-info-contenedor">
+
+                <article class="contacto-info-tarjeta">
+                    <img class="contacto-info-icono" src="../assets/contacto/reloj-icon.png" alt="icono de tiempo">
+                    <div class="contacto-info-texto">
+                        <h3>Tiempo de respuesta</h3>
+                        <span class="contacto-info-destacado">
+                            24–48 horas hábiles
+                        </span>
+                        <p>Procuro responder los mensajes lo antes posible.</p>
+                    </div>
+                </article>
+
+                <article class="contacto-info-tarjeta">
+                    <img class="contacto-info-icono" src="../assets/contacto/location-icon.png" alt="">
+                    <div class="contacto-info-texto">
+                        <h3>Ubicación</h3>
+                        <span class="contacto-info-destacado">
+                            León, Guanajuato, México
+                        </span>
+                        <p>Trabajo de forma remota y puedo colaborar
+                            en proyectos desde cualquier lugar.</p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
     </main>
 
     <footer>

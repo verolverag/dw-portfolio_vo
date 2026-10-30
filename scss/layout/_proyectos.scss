@@ -2,11 +2,35 @@
 @use "../utilities/mixins" as *;
 @use "../utilities/extend" as *;
 
+.proyectos-hero {
+    background: linear-gradient(135deg, $color-principal, $color-principalmasoscuro);
+    padding: 2rem 1.5rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+
+    h1 {
+        font-family: $fuente-secundaria;
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 1.1;
+        color: $color-oscuro;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: $color-white;
+        margin: 0;
+    }
+}
+
 @keyframes entrada-proyectos {
     0% {
         opacity: 0;
         transform: translateY(30%);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -20,10 +44,11 @@
 }
 
 .tarjeta-proyecto {
-    background-color: $color-tarjeta;
-    @include flex(column, center, center, 1rem);
-    padding: 1rem;
+    background-color: $color-white;
+    @include flex(column, flex-start, stretch, 0);
+    padding: 0;
     border-radius: 1rem;
+    overflow: hidden;
     animation: entrada-proyectos 1s ease-out;
 
     &:focus {
@@ -34,7 +59,7 @@
     h2 {
         font-size: 1.5rem;
         color: $color-oscuro;
-        padding: 1rem;
+        text-align: center;
     }
 
     img {
@@ -42,14 +67,17 @@
         height: auto;
         object-fit: cover;
         display: block;
-        border-radius: 1rem;
+        border-radius: 0 0 1rem 1rem;
     }
 
     p {
         font-size: 1rem;
         color: #818282;
-        padding: 1rem;
         text-align: center;
+    }
+
+    .tarjeta-proyecto-info {
+        padding: 1rem;
     }
 }
 
@@ -64,43 +92,39 @@
 // Vista Escritorio
 @include desktop {
     .galeria-proyectos {
-        @include grid(1fr 1fr 1fr, auto, "bites noura noura" "bites mundo tetoro", 1rem);
+        @include grid(repeat(9, 1fr), auto,
+            "bites bites bites noura noura noura ahorrita ahorrita ahorrita"
+            "bites bites bites mundo mundo tetoro tetoro pizzas pizzas",
+            1rem);
     }
 
     .bites {
         grid-area: bites;
-        
+
         img {
-        aspect-ratio: 1/1.5;
-        object-fit: cover;
+            aspect-ratio: 1/1.5;
+            object-fit: cover;
         }
+    }
+
+    .ahorrita {
+        grid-area: ahorrita;
     }
 
     .noura {
         grid-area: noura;
-
-        img {
-        aspect-ratio: 2/1;
-        object-fit: cover;
-        }   
     }
 
     .mundo {
         grid-area: mundo;
-
-        img {
-        aspect-ratio: 16/9;
-        object-fit: cover;
-        }   
     }
 
     .tetoro {
         grid-area: tetoro;
-        
-        img {
-        aspect-ratio: 16/9;
-        object-fit: cover;
-        }
+    }
+
+    .pizzas {
+        grid-area: pizzas;
     }
 
 

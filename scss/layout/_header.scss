@@ -2,8 +2,6 @@
 @use "../utilities/mixins" as *;
 @use "../utilities/extend" as *;
 
-@use "../utilities/variables" as *;
-
 .header {
     background-color: $color-claro;
     background-size: cover;

@@ -95,6 +95,56 @@
     }
 }
 
+// Galería de na
+
+.na-galeria {
+    @include grid(1fr, null, null, 1.5rem);
+
+    h2 {
+        font-family: $fuente-secundaria;
+        font-size: 2rem;
+        color: $na-verde;
+        text-align: center;
+        margin: 0;
+    }
+
+    > p {
+        font-size: 1.1rem;
+        color: $color-oscurotexto;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.na-tarjeta {
+    background-color: $na-clarorosa;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: $na-verde;
+    margin: 1rem 1rem 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    text-align: center;
+    color: $color-oscurotexto;
+    line-height: 1.5;
+    margin: 0 1rem 1.5rem;
+}
+}
+
 // Vista Tablet
 @include tablet {
 
@@ -139,6 +189,16 @@
             border-right: 1px solid $na-verde;
         }
     }
+
+//galería NA
+
+.na-galeria {
+        grid-template-columns: repeat(2, 1fr);
+
+        h2, > p {
+            grid-column: 1 / -1;
+        }
+}
 }
 
 // Vista Escritorio
@@ -182,4 +242,10 @@
             font-size: 1rem;
         }
     }
+
+    //galería NA
+    
+.na-galeria {
+    grid-template-columns: repeat(4, 1fr);
+}
 }

@@ -28,12 +28,145 @@
     }
 }
 
-.video-responsive {
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
-    border: 0;
-    display: block;
+// Sección Hablemos
+
+.contacto-hablemos {
+    background-color: $color-white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.contacto-hablemos-contenido {
+
+    h2 {
+        font-family: $fuente-secundaria;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-oscuro;
+        margin-bottom: 0.75rem;
+    }
+
+    >p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: $color-oscurotexto;
+        margin-bottom: 1.5rem;
+    }
+}
+
+// Enlaces de contacto
+
+.contacto-hablemos-enlaces {
+    @include flex(column, null, stretch, 0.75rem);
+}
+
+.contacto-enlace {
+    @include flex(row, null, center, 0.75rem);
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    background-color: #f5e9ed;
+}
+
+.contacto-enlace-icono {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.contacto-enlace-texto {
+    flex: 1;
+}
+
+.contacto-enlace-titulo {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: $color-oscurotexto;
+}
+
+.contacto-enlace-descripcion {
+    font-size: 0.85rem;
+    margin: 0;
+    color: $color-oscurotexto;
+}
+
+.contacto-enlace-flecha {
+    font-size: 3rem;
+    line-height: 1;
+    color: $color-oscuro;
+}
+
+// Información adicional de contacto
+
+.contacto-info {
+    margin-top: 2rem;
+
+    h2 {
+        font-family: $fuente-secundaria;
+        font-size: 2rem;
+        color: $color-oscuro;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    >p {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: $color-oscurotexto;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.contacto-info-contenedor {
+    @include flex(column, null, stretch, 1rem);
+}
+
+.contacto-info-tarjeta {
+    @include flex(row, null, flex-start, 1rem);
+    background-color: $color-white;
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+    text-align: left;
+
+    .contacto-info-icono {
+        width: 3rem;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .contacto-info-texto {
+        flex: 1;
+        min-width: 0;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $color-oscurotexto;
+        margin-bottom: 0.5rem;
+    }
+
+    .contacto-info-destacado {
+        display: inline-block;
+        background-color: #f5e9ed;
+        color: $color-oscuro;
+        font-weight: 600;
+        padding: 0.35rem 0.75rem;
+        border-radius: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: $color-oscurotexto;
+        margin: 0;
+    }
 }
 
 //Para tablet
@@ -49,6 +182,40 @@
             font-size: 1.2rem;
         }
     }
+
+    // Sección Hablemos - Tablet
+
+.contacto-hablemos {
+    @include flex(row, space-between, center, 2rem);
+}
+
+.contacto-hablemos-contenido {
+    flex: 1.2;
+    min-width: 0;
+}
+
+.contacto-hablemos-imagen {
+    flex: 1;
+    min-width: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+// Información adicional - Tablet
+
+.contacto-info-contenedor {
+    flex-direction: row;
+}
+
+.contacto-info-tarjeta {
+    flex: 1;
+    min-width: 0;
+}
+
 }
 
 //Para Escritorio
@@ -64,4 +231,22 @@
             font-size: 1.3rem;
         }
     }
+
+    // Hablemos - Desktop
+
+.contacto-hablemos-contenido {
+    flex: 1;
+}
+
+.contacto-hablemos-imagen {
+    flex: 0 1 35%;
+    max-width: 400px;
+}
+
+.contacto-hablemos-enlaces {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
 }

@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos | Verónica Olvera</title>
-    <meta name="description" content="Explora algunos de mis proyectos favoritos en diseño gráfico, identidad visual y UX/UI.">
-    <meta name="keywords" content="proyectos de diseño gráfico, portafolio UX/UI, branding, identidad visual, diseño de interfaces, diseño digital">
+    <meta name="description"
+        content="Explora algunos de mis proyectos favoritos en diseño gráfico, identidad visual y UX/UI.">
+    <meta name="keywords"
+        content="proyectos de diseño gráfico, portafolio UX/UI, branding, identidad visual, diseño de interfaces, diseño digital">
 
     <!--CSS Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -59,8 +61,10 @@
         </nav>
     </header>
     <main>
-        <h1 class="subtitle">Mis Proyectos</h1>
-        <p>Aquí puedes ver algunos de mis proyectos favoritos.</p>
+        <section class="proyectos-hero">
+            <h1>Proyectos que cobran vida</h1>
+            <p>Aquí te muestro algunos de mis proyectos favoritos que viven hasta el día de hoy.</p>
+        </section>
 
         <div class="mobile">
 
@@ -76,13 +80,16 @@
                 <!-- Imágenes carrusel -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../assets/proyectos/carrusel1.png" class="d-block w-100" alt="Tarjeta presentación de Tetoro">
+                        <img src="../assets/proyectos/carrusel1.png" class="d-block w-100"
+                            alt="Tarjeta presentación de Tetoro">
                     </div>
                     <div class="carousel-item">
-                        <img src="../assets/proyectos/carrusel2.jpg" class="d-block w-100" alt="Pick Up con rotulado en vinil de logotipo Vital Power">
+                        <img src="../assets/proyectos/carrusel2.jpg" class="d-block w-100"
+                            alt="Pick Up con rotulado en vinil de logotipo Vital Power">
                     </div>
                     <div class="carousel-item">
-                        <img src="../assets/proyectos/Carrusel3.jpg" class="d-block w-100" alt="Tarjetas de presentación de Kinetyen Fisioterapia">
+                        <img src="../assets/proyectos/Carrusel3.jpg" class="d-block w-100"
+                            alt="Tarjetas de presentación de Kinetyen Fisioterapia">
                     </div>
                 </div>
                 <!-- Botones carrusel -->
@@ -103,24 +110,52 @@
         <div class="escritorio">
             <section class="galeria-proyectos">
                 <article class="tarjeta-proyecto bites" tabindex="0">
-                    <h2>Bites & Bloom</h2>
-                    <img src="../assets/proyectos/Portada 17_bitesbloom.jpg" alt="Logotipo de Bites&Bloom">
-                    <p>Logotipo desarrollado para la snack bar de Bites&Bloom</p>
+                    <picture>
+                        <source
+                        media="(min-width:1200px)"
+                        srcset="../assets/proyectos/bitesbloom-desktop.png">
+                        
+                        <img src="../assets/proyectos/bitesbloom-mockup.png" alt="snack bar de bites&bloom">
+                    </picture>
+                    <div class="tarjeta-proyecto-info">
+                        <h2>Bites & Bloom</h2>
+                        <p>Logotipo desarrollado para un snack bar de Bites&Bloom que se encuentra en Veracruz</p>
+                    </div>
                 </article>
                 <article class="tarjeta-proyecto noura" tabindex="0">
-                    <h2>Noura</h2>
-                    <img src="../assets/proyectos/Portada 14 Noura.jpg" alt="Logotipo de Noura">
-                    <p>Logotipo desarrollado para el estudio y salón de belleza Noura que se encuentra en CDMX</p>
+                    <img src="../assets/proyectos/noura-studio.png" alt="estudio de uñas con el logotipo de Noura en el fondo">
+                    <div class="tarjeta-proyecto-info">
+                        <h2>Noura</h2>
+                        <p>Logotipo para el estudio y salón de belleza Noura que se encuentra en CDMX</p>
+                    </div>
+                </article>
+                <article class="tarjeta-proyecto ahorrita" tabindex="0">
+                    <img src="../assets/proyectos/ahorrita-app.png" alt="Capturas de pantalla de la app ahorrita">
+                    <div class="tarjeta-proyecto-info">
+                        <h2>Ahorrita app</h2>
+                        <p>Una aplicación que se crea para que puedas cumplir con tus objetivos de ahorro.</p>
+                    </div>
                 </article>
                 <article class="tarjeta-proyecto mundo" tabindex="0">
-                    <h2>Mi Mundo</h2>
-                    <img src="../assets/proyectos/Portada 11 Be MI MUNDO.png" alt="Logotipo de Mi Mundo">
-                    <p>Logotipo para una marca de journals y agendas creativas</p>
+                    <img src="../assets/proyectos/mimundo-empaque.png" alt="Empaque de agenda Mi mundo, se muestra la agenda dentro de la caja">
+                    <div class="tarjeta-proyecto-info">
+                        <h2>Mi Mundo</h2>
+                        <p>Logotipo y diseño de empaque para una marca de journals y agendas creativas</p>
+                    </div>
                 </article>
                 <article class="tarjeta-proyecto tetoro" tabindex="0">
-                    <h2>Tetoro Drag Queen</h2>
-                    <img src="../assets/proyectos/Portada 16_Tetorojpg.jpg" alt="Logotipo de Tetoro Drag Queen">
-                    <p>Logotipo desarrollado para la drag queen Tetoro</p>
+                    <img src="../assets/proyectos/tetoro-camerino.png" alt="Camerino de una dragqueen con el logotipo Tetoro en neón de fondo">
+                    <div class="tarjeta-proyecto-info">
+                        <h2>Tetoro Drag Queen</h2>
+                        <p>Logotipo para una Drag Queen de Mazatlán</p>
+                    </div>
+                </article>
+                <article class="tarjeta-proyecto pizzas" tabindex="0">
+                    <img src="../assets/proyectos/power-pizzas.png" alt="Cajas de pizza alineadas mostrando el logotipo de Power Pizza">
+                    <div class="tarjeta-proyecto-info">
+                        <h2>Power Pizzas</h2>
+                        <p>Branding completo para pizzeria, incluyendo menús, banners y empaques.</p>
+                    </div>
                 </article>
             </section>
         </div>
